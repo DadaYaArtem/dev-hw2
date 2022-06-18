@@ -5,6 +5,7 @@ import java.util.Map;
 
 class ProductDataTest {
     @Test
+    //we need also test with the valid data
     public void calculateCostTest(){
         String[] invalidInputs = {
                 "12",
