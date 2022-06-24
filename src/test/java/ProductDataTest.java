@@ -6,7 +6,7 @@ import java.util.Map;
 class ProductDataTest {
     @Test
     //we need also test with the valid data
-    public void calculateCostTest(){
+    public void calculateInvalidCostTest(){
         String[] invalidInputs = {
                 "12",
                 "aA",
@@ -19,6 +19,19 @@ class ProductDataTest {
                     () -> ProductData.calculateCost(invalidInput),
                     invalidInput
             );
+        }
+    }
+
+    @Test
+    public void calculateValidCostTest(){
+        String[] input = {
+                "AAA",
+                "CCCCCC",
+                "AAAAAA"
+        };
+        double[] actualValues = {3.0, 5.0, 6.0};
+        for (int i = 0; i < input.length; i++) {
+            Assertions.assertEquals(actualValues[i], ProductData.calculateCost(input[i]));
         }
     }
 

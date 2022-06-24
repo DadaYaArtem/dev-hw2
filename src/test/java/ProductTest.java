@@ -27,27 +27,32 @@ public class ProductTest {
     }
 
     @Test
-    void setAmount(){
+    void setAmountInvalid(){
         Assertions.assertThrows(
                 IllegalArgumentException.class,
                 () -> product.setDiscountAmount(-1),
                 product.getDiscountAmount() + ""
         );
+    }
 
+    @Test
+    void setAmountValid(){
         product.setDiscountAmount(10);
         Assertions.assertEquals(product.getDiscountAmount(),10d);
     }
 
     @Test
-    void setDiscountAmountPrice(){
+    void setDiscountAmountPriceInvalid(){
         Assertions.assertThrows(
                 IllegalArgumentException.class,
                 () -> product.setPriceForDiscountAmount(-4),
                 product.getPriceForDiscountAmount() + ""
         );
+    }
 
+    @Test
+    void setDiscountAmountPriceValid(){
         product.setPriceForOnePiece(4d);
         Assertions.assertEquals(product.getPriceForOnePiece(),4d);
     }
-
 }
