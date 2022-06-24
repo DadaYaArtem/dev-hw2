@@ -5,20 +5,8 @@ import java.util.Map;
 
 class ProductDataTest {
     @Test
-    public void calculateValidCostTest(){
-        String[] input = {
-                "AAA",
-                "CCCCCC",
-                "AAAAAA"
-        };
-        double[] actualValues = {3.0, 5.0, 6.0};
-        for (int i = 0; i < input.length; i++) {
-            Assertions.assertEquals(actualValues[i], ProductData.calculateCost(input[i]));
-        }
-    }
-
-    @Test
-    public void calculateInvalidCostTest(){
+    //we need also test with the valid data
+    public void calculateCostTest(){
         String[] invalidInputs = {
                 "12",
                 "aA",

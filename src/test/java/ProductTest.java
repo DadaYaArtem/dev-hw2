@@ -10,6 +10,7 @@ public class ProductTest {
         product = new Product("H", 6d, 14d, 11);
     }
 
+    //you have to separate those tests "happy path" and the exception expectation
     @Test
     void setPriceForOneInvalid(){
         Assertions.assertThrows(

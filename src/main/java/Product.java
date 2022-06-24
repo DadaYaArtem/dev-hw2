@@ -60,6 +60,8 @@ public class Product {
         }
     }
 
+    //actually bete to say "isPriceGreaterThenZero" or something similar
+    //"OK" can have several meanings
     public static boolean isPriceOk(double price) {
         if (price > 0) {
             return true;
