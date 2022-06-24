@@ -11,13 +11,16 @@ public class ProductTest {
     }
 
     @Test
-    void setPriceForOne(){
+    void setPriceForOneInvalid(){
         Assertions.assertThrows(
                 IllegalArgumentException.class,
                 () -> product.setPriceForOnePiece(-1),
                 product.getPriceForOnePiece() + ""
         );
+    }
 
+    @Test
+    void setPriceForOneValid(){
         product.setPriceForOnePiece(3d);
         Assertions.assertEquals(product.getPriceForOnePiece(),3d);
     }
